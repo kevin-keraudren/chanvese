@@ -19,9 +19,9 @@ of C.
 Example
 -------
 
-![Initialisation](levelset_start.png)
+<img src="levelset_start.png" alt="Initialisation" height="200">
 
-![Result](levelset_end.png)
+<img src="levelset_end.png" alt="Result" height="200">
 
 Reference
 ---------
