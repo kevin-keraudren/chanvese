@@ -139,6 +139,8 @@ def show_curve_and_phi(fig, I, phi, color):
     fig.axes[1].imshow(phi)
     fig.axes[1].set_axis_off()
     plt.draw()
+    
+    plt.pause(0.001)
 
 
 def im2double(a):
