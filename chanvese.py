@@ -25,7 +25,9 @@
 #
 # Coded by: Shawn Lankton (www.shawnlankton.com)
 # ------------------------------------------------------------------------
-
+# 
+# Gif montage (save each step in a gif folder):
+# convert -delay 50 gif/levelset*.png levelset.gif
 
 import numpy as np
 import scipy.ndimage as nd

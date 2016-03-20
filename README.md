@@ -21,13 +21,8 @@ Example
 -------
 
 ``python chanvese.py``
-
-Initialisation:     
-<img src="levelset_start.png" alt="Initialisation" height="200">
-
-
-Final segmentation:     
-<img src="levelset_end.png" alt="Result" height="200">
+    
+<img src="levelset.gif" height="200">
 
 
 Reference
