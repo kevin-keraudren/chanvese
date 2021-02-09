@@ -32,6 +32,8 @@
 import numpy as np
 import scipy.ndimage as nd
 import matplotlib.pyplot as plt
+from PIL import Image, ImageOps
+
 
 
 eps = np.finfo(float).eps
@@ -93,7 +95,7 @@ def chanvese(I, init_mask, max_its=200, alpha=0.2,
             # Keep SDF smooth
             phi = sussman(phi, 0.5)
 
-            new_mask = phi <= 0
+            new_mask = phi # <= 0
             c = convergence(prev_mask, new_mask, thresh, c)
 
             if c <= 5:
@@ -264,7 +266,12 @@ def convergence(p_mask, n_mask, thresh, c):
 
 
 if __name__ == "__main__":
-    img = nd.imread('brain.png', flatten=True)
+    # img = Image.open('img/fauteuil.png')
+    img = Image.open('img/brain.png')
+    # size = img.size
+    # img.resize((size[0]//4, size[1]//4))
+    img = np.array(ImageOps.grayscale(img))
+    
     mask = np.zeros(img.shape)
     mask[20:100, 20:100] = 1
 
