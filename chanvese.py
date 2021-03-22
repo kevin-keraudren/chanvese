@@ -254,7 +254,7 @@ def sussman_sign(D):
 
 # Convergence Test
 def convergence(p_mask, n_mask, thresh, c):
-    diff = p_mask - n_mask
+    diff = np.array(p_mask.astype(np.int)) - np.array(n_mask.astype(np.int))
     n_diff = np.sum(np.abs(diff))
     if n_diff < thresh:
         c = c + 1
